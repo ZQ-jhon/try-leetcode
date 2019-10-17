@@ -1,0 +1,1 @@
+The thinking of my leetcode road
