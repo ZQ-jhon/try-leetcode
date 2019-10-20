@@ -1,1 +1,1 @@
-The thinking of my leetcode road
+The thinking of my leetcode road, about base algorithm in work.
