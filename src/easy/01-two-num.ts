@@ -27,14 +27,18 @@ t1.executeTenThousandTimes();
  */
 
 function twoSum2(num: number[], target: number) {
+    if (!Array.isArray(num) || num.length === 0 || !num.every(i => typeof i === 'number')) {
+        return [];
+    }
     // store value-index entries of num.
     const map = new Map();
     for (let i = 0; i < num.length; i++) {
-        const otherIndex = target - num[i];
-        if(map.has(target - num[i])){
-                return [map.get(otherIndex), i]
-           }
-       map.set(num[i], i);
+        const otherValue = target - num[i];
+        // 如果存在这样能够直接和当前 value 组成最终 target 的 下标值
+        if (map.has(otherValue)) {
+            return [map.get(otherValue), i]
+        }
+        map.set(num[i], i);
     }
 }
 
