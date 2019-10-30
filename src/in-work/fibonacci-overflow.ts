@@ -13,6 +13,7 @@ function fibonacci(n: number): number {
     return fibonacci(n - 1) + fibonacci(n - 2);
 }
 
+// if n > 40, it's will be crash with [Error: Max callstack overflow...]
 const t = new TimeStatistics(fibonacci, [20]); // 3 ms
 t.executeTenThousandTimes(); // 743 ms
 
@@ -25,12 +26,13 @@ t.executeTenThousandTimes(); // 743 ms
  * O(t) = O(n)
  */
 function fibonacci2(n: number): number {
-    if (n == 0) return 0;
-    let a1 = 0, a2 = 1;
+    if (n === 0) { return 0; }
+    let prev = 0, next = 1;
     for (let i = 1; i < n; i++) {
-        [a1, a2] = [a2, a1 + a2];
+        // 状态转移方程
+        [prev, next] = [next, prev + next];
     }
-    return a2;
+    return next;
 }
 
 const t2 = new TimeStatistics(fibonacci2, [20]); // 1ms
