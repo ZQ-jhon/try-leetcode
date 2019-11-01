@@ -23,7 +23,7 @@ function maxProfit(prices: number[]) {
     const len = prices.length;
     for (let i = 1; i < len; i++) {
         if (prices[i] > prices[i - 1]) {
-            total += prices[i + 1];
+            total += prices[i] - prices[i-1];
         }
     }
     return total;
