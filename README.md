@@ -1,6 +1,7 @@
-## The thinking of my leetcode road, about base algorithm in work.
+## Why i create this repository ?
+The thinking of my leetcode road, about base algorithm in work.
 
-## How to test execute time?
+## How to statistics execute time in my algorithm function ?
 ```typescript
 // import timer tool
 import { TimeStatistics } from 'utils/time-log';
