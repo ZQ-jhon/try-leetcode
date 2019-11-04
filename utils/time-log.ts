@@ -8,17 +8,17 @@ export class TimeStatistics {
     constructor(cb: Function, params: any[]){
         this.cb = cb;
         this.params = params;
-        const t = new Date().getTime();
+        console.time('timing');
         const result = cb.apply(null, params);
         console.log(`return:`, result);
-        console.info(`timing:`, new Date().getTime() - t);
+        console.timeEnd('timing');
     }
 
     public executeTenThousandTimes() {
-        const t = new Date().getTime();
+        console.time('10,000 Times spend ms:');
         for(let i =0; i< 10000; i++) {
             this.cb.apply(null, this.params);
         }
-        console.info(`10,000 Times spend ms:`, new Date().getTime() - t);
+        console.timeEnd('10,000 Times spend ms:');
     }
 }
