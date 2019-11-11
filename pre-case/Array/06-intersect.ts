@@ -18,7 +18,7 @@ const TEST_CASE1 = [[1, 2, 2, 3, 4, 5, 7, 8, 9], [2, 4, 8, 9]];
  */
 
 /**
- * O(T) = O(N+N) = O(2N) = O(N)
+ * O(T) = O(N+N) = O(2N) = O(N) 
  */
 function intersect(arr1: number[], arr2: number[]): number[] {
     const map = new Map<number, number>();
