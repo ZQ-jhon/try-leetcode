@@ -1,3 +1,6 @@
+import { TimeStatistics } from '../../../utils/time-log';
+import { SINGLE_TEST_CASE } from '../../../test_case/pre-case-array-05-single-number';
+
 // 给定一个非空整数数组，除了某个元素只出现一次以外，其余每个元素均出现两次。找出那个只出现了一次的元素。
 
 // 说明：
@@ -12,8 +15,7 @@
 // 输入: [4,1,2,1,2]
 // 输出: 4
 
-import { TimeStatistics } from '../../utils/time-log';
-import { SINGLE_TEST_CASE } from '../../test_case/pre-case-array-05-single-number';
+
 
 /**
  * 老套路，在不适用嵌套循环的条件下，哈希表是常见的解法

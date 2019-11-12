@@ -1,4 +1,4 @@
-import { TimeStatistics } from "../../utils/time-log";
+import { TimeStatistics } from '../../../utils/time-log';
 // 特意选了一个超出 MAX_SAFE_INTEGER 的数
 const TEST_CASE = [1, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9];
 

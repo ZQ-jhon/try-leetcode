@@ -1,4 +1,4 @@
-import { TimeStatistics } from "../../utils/time-log";
+import { TimeStatistics } from '../../../utils/time-log';
 
 // 题目:
 // 原地算法

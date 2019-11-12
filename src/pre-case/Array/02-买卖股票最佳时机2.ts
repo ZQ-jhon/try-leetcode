@@ -1,3 +1,6 @@
+import { TimeStatistics } from '../../../utils/time-log';
+const TEST_CASE = [[7,1,5,3,6,4]];
+
 // https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/submissions/
 // 给定一个数组，它的第 i 个元素是一支给定股票第 i 天的价格。
 
@@ -28,3 +31,6 @@ function maxProfit(prices: number[]) {
     }
     return total;
 }
+
+const t = new TimeStatistics(maxProfit, [TEST_CASE]);
+t.executeTenThousandTimes();

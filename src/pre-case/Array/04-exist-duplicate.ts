@@ -1,4 +1,5 @@
-import { TimeStatistics } from "../../utils/time-log";
+import { TimeStatistics } from '../../../utils/time-log';
+
 const TEST_CASE = [1,2,3,4,5,1];
 // 给定一个整数数组，判断是否存在重复元素。
 

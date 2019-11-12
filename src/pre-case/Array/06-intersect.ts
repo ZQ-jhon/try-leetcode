@@ -1,4 +1,5 @@
-import { TimeStatistics } from "../../utils/time-log";
+import { TimeStatistics } from '../../../utils/time-log';
+
 const TEST_CASE1 = [[1, 2, 2, 3, 4, 5, 7, 8, 9], [2, 4, 8, 9]];
 // 给定两个数组，编写一个函数来计算它们的交集。
 // 输入: nums1 = [1,2,2,1], nums2 = [2,2]
