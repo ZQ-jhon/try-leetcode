@@ -41,19 +41,22 @@ const TEST_CASE1 = [
  */
 function isValidSudoku(arr: Array<Array<number | '.'>>) {
     for (let i = 0; i < 9; i++) {
-        // 遍历行*列
+        // 遍历数独，无非是 9*9，无论是先遍历行，或者先遍历列，下面的 row 和 col 都可以保证
+        // 每行 或者 每列 没有重复的项
         const row = new Set(), col = new Set();
         for (let j = 0; j < 9; j++) {
             if (typeof arr[i][j] === 'number') {
-                // TODO: 多行的状态为什么只用一个 set 就可以保存 ?
+                // 第 j 行 已经有 arr[i][j] 这样的元素了吗？
                 if (row.has(arr[i][j])) return false
                 row.add(arr[i][j])
-            }
-            if (typeof arr[i][j] === 'number') {
+                // 第 i 列 已经有 arr[i][j] 这样的元素了吗？
                 if (col.has(arr[j][i])) return false
                 col.add(arr[j][i])
             }
+
         }
+
+
         // 遍历3*3小宫格
         const block = new Set();
         // 0-2 是第一个数独的 x 坐标区间， 3-5 是第二个，以此类推
