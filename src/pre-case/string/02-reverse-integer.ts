@@ -21,7 +21,7 @@ function reverseInteger1(x: number) {
         i++;
         j--;
     }
-    if(x < 0) {
+    if (x < 0) {
         arr.unshift('-');
     }
     console.log(arr);
@@ -32,8 +32,17 @@ function reverseInteger1(x: number) {
 
 
 /**
- * // TODO: 再加上溢出判断
+ * 字符串反转+溢出判断
  */
-function reverseInteger(x: number) { 
+function reverseInteger(x: number) {
+    let a = x < 0 ? '-' : '';
+    let data = Math.abs(x).toString().split('');
+    if (data.length < 2) { return x; }
 
+    a = a + Number(data.reverse().join(''))
+    if (a > (Math.pow(2, 31) - 1) || a < Math.pow(-2, 31)) {
+        return 0
+    } else {
+        return a
+    }
 }
