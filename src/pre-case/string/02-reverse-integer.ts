@@ -39,8 +39,8 @@ function reverseInteger(x: number) {
     let data = Math.abs(x).toString().split('');
     if (data.length < 2) { return x; }
 
-    a = a + Number(data.reverse().join(''))
-    if (a > (Math.pow(2, 31) - 1) || a < Math.pow(-2, 31)) {
+    a = a + data.reverse().join('');
+    if (Number(a) > (Math.pow(2, 31) - 1) || Number(a) < Math.pow(-2, 31)) {
         return 0
     } else {
         return a
