@@ -1,7 +1,5 @@
 import { TimeStatistics } from "../../../utils/time-log";
 const TEST_CASE1 = '     -44 wadwd';
-// ![06.png](06.png)
-// ![06-2.png](06-2.png)
 
 // 题干太长，不复制了，直接在这里看吧
 // https://leetcode-cn.com/explore/interview/card/top-interview-questions-easy/5/strings/37/
