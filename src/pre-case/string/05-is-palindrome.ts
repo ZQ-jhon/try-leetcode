@@ -26,8 +26,8 @@ function isPalindrome1(s: string) {
     return reverse === source;
 }
 
-// const t1 = new TimeStatistics(isPalindrome1, [TEST_CASE1]);
-// t1.executeTenThousandTimes();
+const t1 = new TimeStatistics(isPalindrome1, [TEST_CASE1]);
+t1.executeTenThousandTimes();
 
 
 
